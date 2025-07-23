@@ -4,17 +4,17 @@ using Enums;
 using System.Threading.Tasks;
 
 public class MenuController{
-  private static bool _isRunning {get; set;} = false;
+  private static bool IsRunning {get; set;}
   private UserInputViews _userInput = new UserInputViews();
   private UserViews _userViews = new UserViews();
   private DrinkController _drinkController = new DrinkController();
 
   public MenuController(){
-    _isRunning = true;
+    IsRunning = true;
   }
 
   public async Task MainMenu(){
-    while(_isRunning){
+    while(IsRunning){
         _userViews.ShowProjectInfo();
         var choice = _userInput.GetUiSelection();
         switch(choice){
@@ -54,7 +54,7 @@ public class MenuController{
             Console.Clear();
             break;
           case MainUi.Exit:
-            _isRunning = false;
+            IsRunning = false;
             Console.Clear();
             break;
         }
