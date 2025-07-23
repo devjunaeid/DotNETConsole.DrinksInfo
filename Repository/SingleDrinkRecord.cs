@@ -40,10 +40,7 @@ public record class SingleDrinkRecord(
   [property: JsonPropertyName("strMeasure14")] string Measure14,
   [property: JsonPropertyName("strMeasure15")] string Measure15,
   [property: JsonPropertyName("strImageAttribution")] string ImageAttribute,
-  [property: JsonPropertyName("dateModified")] DateTime LastModified
-)
-{
-    public DateTime LastUpdated => LastModified.ToLocalTime();
-}
+  [property: JsonPropertyName("dateModified")] string LastModified
+);
 
 
